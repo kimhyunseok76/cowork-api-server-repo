@@ -7,6 +7,10 @@ const { Member } = db;
 
 app.use(express.json());
 
+app.get('/', async(req, res) => {
+    res.send('URL should contain /api/..')
+})
+
 app.use((req, res, next) => {
     console.log(req.query);
     next();
